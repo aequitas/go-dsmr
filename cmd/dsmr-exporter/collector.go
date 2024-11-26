@@ -190,7 +190,7 @@ func (c *Collector) Run(ctx context.Context, onReady func() error) error {
 	for {
 		frame, err := c.r.Next()
 		if err != nil {
-			return err
+                        continue
 		}
 
 		c.m.Lock()
